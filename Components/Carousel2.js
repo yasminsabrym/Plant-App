@@ -9,7 +9,7 @@ import {
   Platform,
 } from "react-native";
 import homeplant from "../assets/homeplant.png";
-const MyCarousel = (props) => {
+const MyCarousel2 = (props) => {
   const [entries, setEntries] = useState([]);
   const carouselRef = useRef(null);
 
@@ -22,33 +22,33 @@ const MyCarousel = (props) => {
 
   const ENTRIES1 = [
     {
-      title: "Home Plants",
-      subtitle: "68 Types of Plants",
+      title: "#Mini",
+      // subtitle: "68 Types of Plants",
 
-      illustration: require("../assets/homeplant.png"), //  "../assets/homeplant.png",
+      illustration: require("../assets/plant1.png"), //  "../assets/homeplant.png",
       //   illustration: "https://i.imgur.com/UPrs1EWl.jpg",
       // illustration: require("../assets/2.png"),
     },
     {
-      title: "Huge Plants",
-      subtitle: "102 Type Of Plants",
-      illustration: require("../assets/homeplant2.png"), //  "../assets/homeplant.png",
+      title: "#Homely",
+      // subtitle: "102 Type Of Plants",
+      illustration: require("../assets/plant2.png"), //  "../assets/homeplant.png",
 
       // illustration: "https://i.imgur.com/UPrs1EWl.jpg",
     },
     {
-      title: "Huge Plants",
-      subtitle: "102 Type Of Plants",
-      illustration: require("../assets/homeplant.png"), //  "../assets/homeplant.png",
+      title: "#Cute",
+      // subtitle: "102 Type Of Plants",
+      illustration: require("../assets/plant3.png"), //  "../assets/homeplant.png",
 
       // illustration: "https://i.imgur.com/MABUbpDl.jpg",
     },
     {
-      title: "Home Plants",
+      title: "#Mini",
 
-      illustration: require("../assets/homeplant2.png"),
+      illustration: require("../assets/plant1.png"),
       //  "../assets/homeplant.png",
-      subtitle: "68 Types of Plants",
+      // subtitle: "68 Types of Plants",
       // illustration: "https://i.imgur.com/KZsmUi2l.jpg",
     },
   ];
@@ -71,6 +71,9 @@ const MyCarousel = (props) => {
         <Text style={styles.subtitle} numberOfLines={1}>
           {item.subtitle}
         </Text>
+        <Text style={styles.subtitle} numberOfLines={1}>
+          {item.subtitle}
+        </Text>
       </View>
     );
   };
@@ -82,9 +85,9 @@ const MyCarousel = (props) => {
       </TouchableOpacity> */}
       <Carousel
         ref={carouselRef}
-        sliderWidth={500}
+        sliderWidth={600}
         sliderHeight={200}
-        itemWidth={300}
+        itemWidth={146}
         data={entries}
         renderItem={renderItem}
         hasParallaxImages={true}
@@ -93,21 +96,21 @@ const MyCarousel = (props) => {
     </View>
   );
 };
-export default MyCarousel;
+export default MyCarousel2;
 const styles = StyleSheet.create({
   container: {
     // flex: 1,
     marginTop: "5%",
     marginRight: "5%",
-    marginLeft: -100,
+    marginLeft: -225,
     // flexDirection: "row",
     alignSelf: "flex-start",
     justifyContent: "flex-start",
     height: 160,
   },
   item: {
-    width: 307,
-    height: 140,
+    width: 128,
+    height: 190,
   },
   imageContainer: {
     flex: 1,
@@ -116,19 +119,21 @@ const styles = StyleSheet.create({
     borderRadius: 3,
   },
   title: {
-    marginTop: -110,
-    paddingBottom: 20,
-    fontSize: 20,
-    color: "white",
-    marginLeft: "3%",
+    alignSelf: "flex-start",
+    justifyContent: "flex-start",
+
+    marginTop: -35,
+    paddingVertical: 5,
+    borderRadius: 5,
+    backgroundColor: "rgba(255, 255, 255, 0.5)",
+    width: "50%",
+    fontWeight: "bold",
+    fontSize: 13,
+    color: "black",
+    paddingLeft: "8%",
+    marginLeft: "0%",
   },
-  subtitle: {
-    marginTop: -20,
-    paddingBottom: 5,
-    fontSize: 12,
-    color: "white",
-    marginLeft: "3%",
-  },
+
   image: {
     // ...StyleSheet.absoluteFillObject,
     resizeMode: "contain",

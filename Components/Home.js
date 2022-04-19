@@ -19,6 +19,8 @@ import { SearchBar } from "react-native-elements";
 import Camera from "react-native-vector-icons/Feather";
 import Leaf from "react-native-vector-icons/MaterialCommunityIcons";
 import Bookopen from "react-native-vector-icons/Feather";
+import MyCarousel2 from "./Carousel2";
+
 import MyCarousel from "./Carousel";
 const Home = () => {
   const [search, usesearch] = useState(1);
@@ -103,8 +105,11 @@ const Home = () => {
             </View>
           </View>
           <Text style={{ marginTop: "7%", fontSize: 16 }}>Plant Types</Text>
+          <MyCarousel />
+
+          <Text style={{ marginTop: "7%", fontSize: 16 }}>Photography</Text>
+          <MyCarousel2 />
         </View>
-        <MyCarousel />
       </View>
     </ScrollView>
   );
