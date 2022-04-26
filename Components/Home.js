@@ -20,9 +20,8 @@ import Camera from "react-native-vector-icons/Feather";
 import Leaf from "react-native-vector-icons/MaterialCommunityIcons";
 import Bookopen from "react-native-vector-icons/Feather";
 import MyCarousel2 from "./Carousel2";
-
 import MyCarousel from "./Carousel";
-const Home = () => {
+const Home = ({ navigation, route }) => {
   const [search, usesearch] = useState(1);
   // const [search, setChecked] = useState(false);
   updateSearch = (search) => {
@@ -31,49 +30,55 @@ const Home = () => {
   // const { usesearch } = this.state;
 
   return (
-    <ScrollView>
-      <View style={styles.container}>
-        <View style={styles.bg}>
-          <ImageBackground
-            source={bghome}
-            style={{ width: "100%", height: 196 }}
-            resizeMode="cover"
-          >
-            <View
-              style={{
-                flexDirection: "row",
-                width: "90%",
+    <View style={styles.container}>
+      <View style={styles.bg}>
+        <ImageBackground
+          source={bghome}
+          style={{ width: "100%", height: 196 }}
+          resizeMode="cover"
+        >
+          <View
+            style={{
+              flexDirection: "row",
+              width: "90%",
 
-                marginTop: "3%",
-                justifyContent: "space-between",
-                // flexWrap: "wrap",
-              }}
-            >
-              <Text style={styles.title}>Hello Zebby,</Text>
+              marginTop: "3%",
+              justifyContent: "space-between",
+              // flexWrap: "wrap",
+            }}
+          >
+            <Text style={styles.title}>Hello Johm,</Text>
+            <TouchableOpacity onPress={() => navigation.navigate("Profile")}>
               <Image source={pp} style={styles.pp} />
-            </View>
-            <Text style={styles.subtitle}>Let’s Learn More About Plants</Text>
-            {/* <View style={{ width: "90%" }}> */}
-            <SearchBar
-              placeholder="search"
-              onChangeText={updateSearch}
-              // value={search}
-              containerStyle={{
-                backgroundColor: "transparent",
-                width: "100%",
-                borderTopColor: "transparent",
-                borderBottomColor: "transparent",
-              }}
-              round
-              inputContainerStyle={{
-                backgroundColor: "#fff",
-                width: "100%",
-                alignSelf: "center",
-              }}
-            />
-            {/* </View> */}
-          </ImageBackground>
-        </View>
+            </TouchableOpacity>
+          </View>
+          <Text style={styles.subtitle}>Let’s Learn More About Plants</Text>
+          <SearchBar
+            placeholder="search"
+            onChangeText={updateSearch}
+            // value={search}
+            containerStyle={{
+              backgroundColor: "transparent",
+              width: "100%",
+              borderTopColor: "transparent",
+              borderBottomColor: "transparent",
+            }}
+            round
+            inputContainerStyle={{
+              backgroundColor: "#fff",
+              width: "100%",
+              alignSelf: "center",
+            }}
+          />
+          {/* </View> */}
+        </ImageBackground>
+      </View>
+
+      <ScrollView
+        style={{ paddingBottom: "40%" }}
+        contentContainerStyle={{ flexGrow: 1 }}
+        //  automaticallyAdjustContentInsets={true}
+      >
         <View style={styles.container2}>
           <View style={styles.boxesContainer} height={100}>
             <View style={styles.box}>
@@ -106,12 +111,14 @@ const Home = () => {
           </View>
           <Text style={{ marginTop: "7%", fontSize: 16 }}>Plant Types</Text>
           <MyCarousel />
-
+          {/* 
+          <Text style={{ marginTop: "7%", fontSize: 16 }}>Photography</Text>
+          <MyCarousel2 /> */}
           <Text style={{ marginTop: "7%", fontSize: 16 }}>Photography</Text>
           <MyCarousel2 />
         </View>
-      </View>
-    </ScrollView>
+      </ScrollView>
+    </View>
   );
 };
 export default Home;
@@ -119,7 +126,7 @@ export default Home;
 const styles = StyleSheet.create({
   boxesContainer: {
     marginTop: "5%",
-    width: "100%",
+    width: "90%",
     justifyContent: "space-between",
     flexDirection: "row",
   },
@@ -139,7 +146,6 @@ const styles = StyleSheet.create({
     flex: 1,
     alignItems: "flex-start",
     justifyContent: "flex-start",
-
     fontFamily: "Avenir",
   },
   container2: {
@@ -153,12 +159,11 @@ const styles = StyleSheet.create({
     marginLeft: "5%",
   },
   pp: {
-    marginTop: "17%",
-    // alignSelf: "flex-end",
-    // alignItems: "flex-end",
-    // justifyContent: "flex-end",
-    width: "15%",
-    height: "50%",
+    marginTop: "100%",
+    borderRadius: 100,
+    resizeMode: "cover",
+    width: 50,
+    height: 50,
   },
   subtitle: {
     fontSize: 16,

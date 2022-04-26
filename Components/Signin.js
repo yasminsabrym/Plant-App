@@ -13,12 +13,12 @@ import {
 } from "react-native";
 import React, { useState } from "react";
 import Checkbox from "expo-checkbox";
-
-import { borderBottomColor } from "react-native/Libraries/Components/View/ReactNativeStyleAttributes";
+import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
 
 const Signin = ({ navigation, route }) => {
   //   const [state, setState] = useState(1);
   const [isChecked, setChecked] = useState(false);
+  const Tab = createBottomTabNavigator();
 
   return (
     <ScrollView>
@@ -46,17 +46,11 @@ const Signin = ({ navigation, route }) => {
           style={{
             flexDirection: "row",
             marginRight: "5%",
-            // justifyContent: "space-around",
-            // justifyItems: "space-around",
-            // alignItems: "center",
-            // alignContent: "space-around",
-            // textAlign: "center",
+
             marginTop: "9%",
           }}
         >
-          {/* <View style={{ height: 20 }}> */}
           <Checkbox
-            //   style={}
             value={isChecked}
             style={{ margin: "0%" }}
             onValueChange={setChecked}
@@ -64,7 +58,6 @@ const Signin = ({ navigation, route }) => {
           />
           <Text style={{ marginLeft: "3%" }}>Remember Me</Text>
           <Text style={{ marginLeft: "41%" }}>forgot password</Text>
-          {/* </View> */}
         </View>
         <TouchableOpacity
           style={styles.Button}
@@ -73,9 +66,8 @@ const Signin = ({ navigation, route }) => {
           <Text style={styles.ButtonText}>LOGIN</Text>
         </TouchableOpacity>
         <Text style={{ alignSelf: "center" }}>
-          Don’t Have Account? {/* <Link> */}
+          Don’t Have Account?
           <Text style={{ color: "#2DDA93" }}>Sign up</Text>
-          {/* </Link> */}
         </Text>
       </View>
     </ScrollView>

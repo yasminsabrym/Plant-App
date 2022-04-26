@@ -103,6 +103,8 @@ const styles = StyleSheet.create({
     marginTop: "5%",
     marginRight: "5%",
     marginLeft: -225,
+    marginBottom: "30%",
+
     // flexDirection: "row",
     alignSelf: "flex-start",
     justifyContent: "flex-start",

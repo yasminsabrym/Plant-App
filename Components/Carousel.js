@@ -9,6 +9,7 @@ import {
   Platform,
 } from "react-native";
 import homeplant from "../assets/homeplant.png";
+
 const MyCarousel = (props) => {
   const [entries, setEntries] = useState([]);
   const carouselRef = useRef(null);
@@ -52,7 +53,23 @@ const MyCarousel = (props) => {
       // illustration: "https://i.imgur.com/KZsmUi2l.jpg",
     },
   ];
+  function Cameras() {
+    const devices = useCameraDevices("wide-angle-camera");
+    const device = devices.back;
 
+    if (device == null)
+      <>
+        <LoadingView />
+      </>;
+    else
+      <>
+        <Camera
+          style={StyleSheet.absoluteFill}
+          device={device}
+          isActive={true}
+        />
+      </>;
+  }
   const renderItem = ({ item, index }, parallaxProps) => {
     return (
       <View style={styles.item}>
