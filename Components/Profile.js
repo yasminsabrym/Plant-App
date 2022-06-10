@@ -75,12 +75,7 @@ const Profile = () => {
               </View>
             </View>
             <TouchableOpacity onPress={() => navigation.navigate("Home")}>
-              <Dotsvertical
-                name="dots-vertical"
-                size={25}
-                color="#FFF"
-                // style={{ marginBottom: 50 }}
-              />
+              <Dotsvertical name="dots-vertical" size={25} color="#FFF" />
             </TouchableOpacity>
           </View>
         </ImageBackground>

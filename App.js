@@ -14,14 +14,7 @@ const Stack = createNativeStackNavigator();
 export default function App() {
   return (
     <NavigationContainer>
-      <Stack.Navigator
-      // screenOptions={{
-      //   headerStyle: {
-      //     elevation: 0,
-      //     shadowOpacity: 0,
-      //   },
-      // }}
-      >
+      <Stack.Navigator>
         <Stack.Screen
           name="Tutorial"
           component={Tutorial}
@@ -32,9 +25,6 @@ export default function App() {
         <Stack.Screen
           name="Signin"
           component={Signin}
-          // options={{
-          //   HeaderTitle: () => <Text>555555555</Text>,
-          // }}
           options={{
             title: "",
             headerShown: true,
@@ -49,10 +39,6 @@ export default function App() {
         <Stack.Screen
           name="Home"
           component={FirstTabNavigator}
-          // options={{
-          //   HeaderTitle: () => <Text>555555555</Text>,
-          // }}
-
           options={{
             title: "",
             headerShown: false,
@@ -62,16 +48,11 @@ export default function App() {
               elevation: 0,
               shadowOpacity: 0,
             },
-            // backgroundColor: "blue",
           }}
         />
         <Stack.Screen
           name="Profile"
           component={Profile}
-          // options={{
-          //   HeaderTitle: () => <Text>555555555</Text>,
-          // }}
-
           options={{
             title: "",
             headerShown: false,
@@ -81,11 +62,9 @@ export default function App() {
               elevation: 0,
               shadowOpacity: 0,
             },
-            // backgroundColor: "blue",
           }}
         />
       </Stack.Navigator>
     </NavigationContainer>
   );
 }
-// export default App;

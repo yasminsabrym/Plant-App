@@ -4,30 +4,124 @@ import {
   Text,
   View,
   ScrollView,
+  Image,
   ImageBackground,
 } from "react-native";
 import React, { useState } from "react";
-import bghome from "../assets/bghome.png";
+import Circle from "react-native-vector-icons/Entypo";
+import {
+  Card,
+  CardTitle,
+  CardContent,
+  CardAction,
+  CardButton,
+  CardImage,
+} from "react-native-cards";
+import image1 from "../assets/homeplant.png";
 
 const Tab2 = ({ navigation, route }) => {
   return (
     <ScrollView>
-      <Text style={{ fontSize: 50, color: "black" }}>TAB 2 </Text>
-      <Text style={{ fontSize: 50, color: "black" }}>TAB 2 </Text>
-      <Text style={{ fontSize: 50, color: "black" }}>TAB 2 </Text>
-      <Text style={{ fontSize: 50, color: "black" }}>TAB 2 </Text>
-      <Text style={{ fontSize: 50, color: "black" }}>TAB 2 </Text>
-      <Text style={{ fontSize: 50, color: "black" }}>TAB 2 </Text>
-      <Text style={{ fontSize: 50, color: "black" }}>TAB 2 </Text>
-      <Text style={{ fontSize: 50, color: "black" }}>TAB 2 </Text>
-      <Text style={{ fontSize: 50, color: "black" }}>TAB 2 </Text>
-      <Text style={{ fontSize: 50, color: "black" }}>TAB 2 </Text>
-      <Text style={{ fontSize: 50, color: "black" }}>TAB 2 </Text>
-      <Text style={{ fontSize: 50, color: "black" }}>TAB 2 </Text>
-      <Text style={{ fontSize: 50, color: "black" }}>TAB 2 </Text>
+      <View style={styles.container}>
+        <Text style={{ fontSize: 17, color: "#36455A" }}>
+          Your collected Plants
+        </Text>
+        <View style={{ flexDirection: "row", marginTop: "8%" }}>
+          <Circle
+            name="circle"
+            size={15}
+            color="blue"
+            style={{ marginRight: "1%" }}
+          />
+          <Text>Alagatre Plant</Text>
+        </View>
+        <View
+          style={{ flexDirection: "row", marginTop: "2%", marginLeft: "5%" }}
+        >
+          <Text>02 . 01 . 2019</Text>
+        </View>
+
+        <Card style={styles.card}>
+          <View style={{ flexDirection: "row" }}>
+            <View style={{ flexDirection: "column" }}>
+              <Image source={image1} style={styles.image1} />
+            </View>
+            <View style={{ flexDirection: "column" }}>
+              <View style={{ flexDirection: "row" }}>
+                <Image source={image1} style={styles.image2} />
+              </View>
+              <View style={{ flexDirection: "row" }}>
+                <Image source={image1} style={styles.image2} />
+              </View>
+            </View>
+          </View>
+        </Card>
+        <View style={{ flexDirection: "row", marginTop: "8%" }}>
+          <Circle
+            name="circle"
+            size={15}
+            color="blue"
+            style={{ marginRight: "1%" }}
+          />
+          <Text>Alagatre Plant</Text>
+        </View>
+        <View
+          style={{ flexDirection: "row", marginTop: "2%", marginLeft: "5%" }}
+        >
+          <Text>02 . 01 . 2019</Text>
+        </View>
+        <Card style={styles.card}>
+          <View style={{ flexDirection: "row" }}>
+            <View style={{ flexDirection: "column" }}>
+              <Image source={image1} style={styles.image1} />
+            </View>
+            <View style={{ flexDirection: "column" }}>
+              <View style={{ flexDirection: "row" }}>
+                <Image source={image1} style={styles.image2} />
+              </View>
+              <View style={{ flexDirection: "row" }}>
+                <Image source={image1} style={styles.image2} />
+              </View>
+            </View>
+          </View>
+        </Card>
+      </View>
     </ScrollView>
   );
 };
 export default Tab2;
 
-const styles = StyleSheet.create({});
+const styles = StyleSheet.create({
+  container: {
+    marginLeft: "5%",
+    marginRight: "5%",
+    marginTop: "7%",
+  },
+  card: {
+    width: 332,
+    height: 330,
+    alignSelf: "center",
+    backgroundColor: "#fff",
+    alignItems: "center",
+    // marginBottom: "1%",
+    marginTop: "5%",
+    justifyContent: "center",
+    borderRadius: 5,
+    borderColor: "#000",
+    borderWidth: 0.2,
+  },
+  image1: {
+    width: 146,
+    height: 300,
+    resizeMode: "stretch",
+    borderRadius: 3,
+  },
+  image2: {
+    width: 146,
+    height: 146,
+    resizeMode: "stretch",
+    marginLeft: "6%",
+    marginBottom: "6%",
+    borderRadius: 3,
+  },
+});

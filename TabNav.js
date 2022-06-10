@@ -26,16 +26,218 @@ const SecondTabNavigator = () => {
             //   marginBottom: "100%",
             marginTop: "0%",
             //   position: "absolute",
-            height: 40,
-            backgroundColor: "green",
+            height: 50,
+            backgroundColor: "transparent",
+
             elevation: 0,
             shadowOpacity: 0,
           },
         }}
       >
-        <Toptab.Screen name="Articles" component={Tab1} />
-        <Toptab.Screen name="Species" component={Tab2} />
-        <Toptab.Screen name="Likes" component={Tab3} />
+        <Toptab.Screen
+          name="Articles"
+          component={Tab1}
+          options={{
+            title: "",
+            //   titleStyle: { fontSize: 30 },
+            headerShown: false,
+            headerShadowVisible: false,
+            //   headerBackVisible: false,
+            headerStyle: {
+              elevation: 0,
+              shadowOpacity: 0,
+            },
+            // tabBarActiveTintColor: "red",
+            // tabBarInactiveTintColor: "black",
+            tabBarIcon: ({ focused }) => {
+              if (focused) {
+                return (
+                  <View
+                    style={{
+                      alignSelf: "center",
+                      width: 100,
+                      height: 33,
+                      backgroundColor: "#48A2F5",
+                      borderRadius: 12,
+                      padding: 6,
+                    }}
+                  >
+                    <Text
+                      style={{
+                        fontSize: 16,
+                        color: "white",
+                        fontWeight: "bold",
+                        alignSelf: "center",
+                      }}
+                    >
+                      Articles
+                    </Text>
+                  </View>
+                );
+              } else {
+                return (
+                  <View
+                    style={{
+                      alignSelf: "center",
+                      width: 100,
+                      height: 33,
+                      backgroundColor: "transparent",
+                      borderRadius: 12,
+                      padding: 6,
+                    }}
+                  >
+                    <Text
+                      style={{
+                        fontSize: 16,
+                        color: "#C5C5C5",
+                        fontWeight: "bold",
+                        alignSelf: "center",
+                      }}
+                    >
+                      Articles
+                    </Text>
+                  </View>
+                );
+              }
+            },
+          }}
+        />
+        <Toptab.Screen
+          name="Species"
+          component={Tab2}
+          options={{
+            title: "",
+            //   titleStyle: { fontSize: 30 },
+            headerShown: false,
+            headerShadowVisible: false,
+            //   headerBackVisible: false,
+            headerStyle: {
+              elevation: 0,
+              shadowOpacity: 0,
+            },
+            // tabBarActiveTintColor: "red",
+            // tabBarInactiveTintColor: "black",
+            tabBarIcon: ({ focused }) => {
+              if (focused) {
+                return (
+                  <View
+                    style={{
+                      alignSelf: "center",
+                      width: 100,
+                      height: 33,
+                      backgroundColor: "#48A2F5",
+                      borderRadius: 12,
+                      padding: 6,
+                    }}
+                  >
+                    <Text
+                      style={{
+                        fontSize: 16,
+                        color: "white",
+                        fontWeight: "bold",
+                        alignSelf: "center",
+                      }}
+                    >
+                      Species
+                    </Text>
+                  </View>
+                );
+              } else {
+                return (
+                  <View
+                    style={{
+                      alignSelf: "center",
+                      width: 100,
+                      height: 33,
+                      backgroundColor: "transparent",
+                      borderRadius: 12,
+                      padding: 6,
+                    }}
+                  >
+                    <Text
+                      style={{
+                        fontSize: 16,
+                        color: "#C5C5C5",
+                        fontWeight: "bold",
+                        alignSelf: "center",
+                      }}
+                    >
+                      Species
+                    </Text>
+                  </View>
+                );
+              }
+            },
+          }}
+        />
+        <Toptab.Screen
+          name="Likes"
+          component={Tab3}
+          options={{
+            title: "",
+            //   titleStyle: { fontSize: 30 },
+            headerShown: false,
+            headerShadowVisible: false,
+            //   headerBackVisible: false,
+            headerStyle: {
+              elevation: 0,
+              shadowOpacity: 0,
+            },
+            // tabBarActiveTintColor: "red",
+            // tabBarInactiveTintColor: "black",
+            tabBarIcon: ({ focused }) => {
+              if (focused) {
+                return (
+                  <View
+                    style={{
+                      alignSelf: "center",
+                      width: 100,
+                      height: 33,
+                      backgroundColor: "#48A2F5",
+                      borderRadius: 12,
+                      padding: 6,
+                    }}
+                  >
+                    <Text
+                      style={{
+                        fontSize: 16,
+                        color: "white",
+                        fontWeight: "bold",
+                        alignSelf: "center",
+                      }}
+                    >
+                      Likes
+                    </Text>
+                  </View>
+                );
+              } else {
+                return (
+                  <View
+                    style={{
+                      alignSelf: "center",
+                      width: 100,
+                      height: 33,
+                      backgroundColor: "transparent",
+                      borderRadius: 12,
+                      padding: 6,
+                    }}
+                  >
+                    <Text
+                      style={{
+                        fontSize: 16,
+                        color: "#C5C5C5",
+                        fontWeight: "bold",
+                        alignSelf: "center",
+                      }}
+                    >
+                      Likes
+                    </Text>
+                  </View>
+                );
+              }
+            },
+          }}
+        />
         {/* <Toptab.Screen name="Tab2" component={Tab2} /> */}
       </Toptab.Navigator>
     </>

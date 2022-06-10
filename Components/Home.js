@@ -22,11 +22,11 @@ import Bookopen from "react-native-vector-icons/Feather";
 import MyCarousel2 from "./Carousel2";
 import MyCarousel from "./Carousel";
 const Home = ({ navigation, route }) => {
-  const [search, usesearch] = useState(1);
-  // const [search, setChecked] = useState(false);
-  updateSearch = (search) => {
-    // search();
-  };
+  // const [search] = useState(1);
+  // const [searchs, setChecked] = useState(false);
+  // updateSearch = (search) => {
+  //   searchs();
+  // };
   // const { usesearch } = this.state;
 
   return (
@@ -53,7 +53,7 @@ const Home = ({ navigation, route }) => {
             </TouchableOpacity>
           </View>
           <Text style={styles.subtitle}>Let’s Learn More About Plants</Text>
-          <SearchBar
+          {/* <SearchBar
             placeholder="search"
             onChangeText={updateSearch}
             // value={search}
@@ -69,7 +69,7 @@ const Home = ({ navigation, route }) => {
               width: "100%",
               alignSelf: "center",
             }}
-          />
+          /> */}
           {/* </View> */}
         </ImageBackground>
       </View>
@@ -111,9 +111,7 @@ const Home = ({ navigation, route }) => {
           </View>
           <Text style={{ marginTop: "7%", fontSize: 16 }}>Plant Types</Text>
           <MyCarousel />
-          {/* 
-          <Text style={{ marginTop: "7%", fontSize: 16 }}>Photography</Text>
-          <MyCarousel2 /> */}
+
           <Text style={{ marginTop: "7%", fontSize: 16 }}>Photography</Text>
           <MyCarousel2 />
         </View>
@@ -202,5 +200,4 @@ const styles = StyleSheet.create({
     textAlign: "center",
     color: "#fff",
   },
-  //   bg: { flex: 1, height: "100%" },
 });
