@@ -5,86 +5,82 @@ import {
   View,
   ScrollView,
   Image,
+  SafeAreaView,
   ImageBackground,
 } from "react-native";
 import React, { useState } from "react";
 import Circle from "react-native-vector-icons/Entypo";
-import {
-  Card,
-  CardTitle,
-  CardContent,
-  CardAction,
-  CardButton,
-  CardImage,
-} from "react-native-cards";
+import { Card } from "react-native-cards";
 import image1 from "../assets/homeplant.png";
 
 const Tab2 = ({ navigation, route }) => {
   return (
     <ScrollView>
       <View style={styles.container}>
-        <Text style={{ fontSize: 17, color: "#36455A" }}>
-          Your collected Plants
-        </Text>
-        <View style={{ flexDirection: "row", marginTop: "8%" }}>
-          <Circle
-            name="circle"
-            size={15}
-            color="blue"
-            style={{ marginRight: "1%" }}
-          />
-          <Text>Alagatre Plant</Text>
-        </View>
-        <View
-          style={{ flexDirection: "row", marginTop: "2%", marginLeft: "5%" }}
-        >
-          <Text>02 . 01 . 2019</Text>
-        </View>
+        <SafeAreaView>
+          <Text style={{ fontSize: 17, color: "#36455A" }}>
+            Your collected Plants
+          </Text>
+          <View style={{ flexDirection: "row", marginTop: "8%" }}>
+            <Circle
+              name="circle"
+              size={15}
+              color="blue"
+              style={{ marginRight: "1%" }}
+            />
+            <Text style={styles.bold}>Alagatre Plant</Text>
+          </View>
+          <View
+            style={{ flexDirection: "row", marginTop: "2%", marginLeft: "5%" }}
+          >
+            <Text>02 . 01 . 2019</Text>
+          </View>
 
-        <Card style={styles.card}>
-          <View style={{ flexDirection: "row" }}>
-            <View style={{ flexDirection: "column" }}>
-              <Image source={image1} style={styles.image1} />
-            </View>
-            <View style={{ flexDirection: "column" }}>
-              <View style={{ flexDirection: "row" }}>
-                <Image source={image1} style={styles.image2} />
+          <Card style={styles.card}>
+            <View style={{ flexDirection: "row" }}>
+              <View style={{ flexDirection: "column" }}>
+                <Image source={image1} style={styles.image1} />
               </View>
-              <View style={{ flexDirection: "row" }}>
-                <Image source={image1} style={styles.image2} />
+              <View style={{ flexDirection: "column" }}>
+                <View style={{ flexDirection: "row" }}>
+                  <Image source={image1} style={styles.image2} />
+                </View>
+                <View style={{ flexDirection: "row" }}>
+                  <Image source={image1} style={styles.image2} />
+                </View>
               </View>
             </View>
+          </Card>
+          <View style={{ flexDirection: "row", marginTop: "8%" }}>
+            <Circle
+              name="circle"
+              size={15}
+              color="blue"
+              style={{ marginRight: "1%" }}
+            />
+            <Text style={styles.bold}>Alagatre Plant</Text>
           </View>
-        </Card>
-        <View style={{ flexDirection: "row", marginTop: "8%" }}>
-          <Circle
-            name="circle"
-            size={15}
-            color="blue"
-            style={{ marginRight: "1%" }}
-          />
-          <Text>Alagatre Plant</Text>
-        </View>
-        <View
-          style={{ flexDirection: "row", marginTop: "2%", marginLeft: "5%" }}
-        >
-          <Text>02 . 01 . 2019</Text>
-        </View>
-        <Card style={styles.card}>
-          <View style={{ flexDirection: "row" }}>
-            <View style={{ flexDirection: "column" }}>
-              <Image source={image1} style={styles.image1} />
-            </View>
-            <View style={{ flexDirection: "column" }}>
-              <View style={{ flexDirection: "row" }}>
-                <Image source={image1} style={styles.image2} />
-              </View>
-              <View style={{ flexDirection: "row" }}>
-                <Image source={image1} style={styles.image2} />
-              </View>
-            </View>
+          <View
+            style={{ flexDirection: "row", marginTop: "2%", marginLeft: "5%" }}
+          >
+            <Text>02 . 01 . 2019</Text>
           </View>
-        </Card>
+          <Card style={styles.card}>
+            <View style={{ flexDirection: "row" }}>
+              <View style={{ flexDirection: "column" }}>
+                <Image source={image1} style={styles.image1} />
+              </View>
+              <View style={{ flexDirection: "column" }}>
+                <View style={{ flexDirection: "row" }}>
+                  <Image source={image1} style={styles.image2} />
+                </View>
+                <View style={{ flexDirection: "row" }}>
+                  <Image source={image1} style={styles.image2} />
+                </View>
+              </View>
+            </View>
+          </Card>
+        </SafeAreaView>
       </View>
     </ScrollView>
   );
@@ -95,7 +91,11 @@ const styles = StyleSheet.create({
   container: {
     marginLeft: "5%",
     marginRight: "5%",
-    marginTop: "7%",
+    marginTop: "2%",
+    marginBottom: "25%",
+  },
+  bold: {
+    fontWeight: "bold",
   },
   card: {
     width: 332,
@@ -103,7 +103,6 @@ const styles = StyleSheet.create({
     alignSelf: "center",
     backgroundColor: "#fff",
     alignItems: "center",
-    // marginBottom: "1%",
     marginTop: "5%",
     justifyContent: "center",
     borderRadius: 5,

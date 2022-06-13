@@ -4,8 +4,10 @@ import { NavigationContainer } from "@react-navigation/native";
 import { createNativeStackNavigator } from "@react-navigation/native-stack";
 import Tutorial from "./Components/Tutorial";
 import Signin from "./Components/Signin";
+import Article from "./Components/Article";
+
 import Profile from "./Components/Profile";
-import Home from "./Components/Home";
+// import Home from "./Components/Home";
 import { FirstTabNavigator, SecondTabNavigator } from "./TabNav";
 // import SecondTabNavigator from "./TabNav";
 
@@ -53,6 +55,20 @@ export default function App() {
         <Stack.Screen
           name="Profile"
           component={Profile}
+          options={{
+            title: "",
+            headerShown: false,
+            headerShadowVisible: false,
+            headerBackVisible: true,
+            headerStyle: {
+              elevation: 0,
+              shadowOpacity: 0,
+            },
+          }}
+        />
+        <Stack.Screen
+          name="Article"
+          component={Article}
           options={{
             title: "",
             headerShown: false,

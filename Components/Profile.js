@@ -38,7 +38,6 @@ const Profile = () => {
               marginLeft: "5%",
               marginTop: "15%",
               justifyContent: "space-between",
-              // flexWrap: "wrap",
             }}
           >
             <TouchableOpacity
@@ -51,10 +50,7 @@ const Profile = () => {
             <View
               style={{
                 flexDirection: "column",
-
                 alignItems: "center",
-
-                //   marginTop: "4%",
               }}
             >
               <Image source={pp} style={styles.pp} />
@@ -90,7 +86,7 @@ export default Profile;
 const styles = StyleSheet.create({
   container: {
     justifyContent: "center",
-
+    // marginBottom: "15%",
     fontFamily: "Avenir",
   },
 

@@ -250,7 +250,7 @@ const FirstTabNavigator = () => {
       screenOptions={{
         tabBarStyle: {
           showLabel: false,
-          //   marginTop: "15%",
+          // marginTop: "15%",
           position: "absolute",
           height: 80,
           backgroundColor: "#fff",
@@ -264,6 +264,7 @@ const FirstTabNavigator = () => {
         component={Home}
         options={{
           title: "",
+
           //   titleStyle: { fontSize: 30 },
           headerShown: false,
           headerShadowVisible: false,
